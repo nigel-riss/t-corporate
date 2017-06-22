@@ -1,0 +1,24 @@
+{
+  "name": "corporate",
+  "version": "1.0.0",
+  "description": "Training corporate landing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuriy Kurenkov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "browsersync": "0.0.1-security",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug2": "0.0.2",
+    "gulp-sass": "^3.1.0",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
