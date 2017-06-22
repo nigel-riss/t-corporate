@@ -2,5 +2,82 @@ doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
+
+        link(href="https://fonts.googleapis.com/css?family=Exo+2:100,400,400i,500&amp;subset=cyrillic", rel="stylesheet")
+        link(rel="stylesheet", href="styles.css")
     body
-        h1 Working MF+++
+        header.header
+            .header__wrapper
+                h1.header__title There is no other <br> platforms for you as like
+                a(href="#").button Try now
+                p.header__comment * No need to add Cards details
+
+        section.section
+            header.section__header
+                p.section__suptitle New Design
+                h2.section__title There is no other platforms for you as like <span>...</span>
+
+            .section__content
+                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
+
+        section.section
+            header.section__header
+                p.section__suptitle New Features
+                h2.section__title Some awesome Features
+
+            .section__content
+                mixin feature(title, text, imgUrl)
+                    article.feature 
+                        .feature__icon: img(src= imgUrl)
+                        .h3.feature__title= title
+                        p.feature__text= text
+
+                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+
+        section.section
+            header.section__header
+                p.section__suptitle New Design
+                h2.section__title There is no other platforms for you as like <span>...</span>
+
+            .section__content
+                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
+
+        section.section.section--testimonials
+            .testimonials
+                mixin testimonial(name, position, text, avatarUrl)
+                    article.testimonial
+                        .testimonial__avatar: img(src= imgUrl)
+                        h3.testimonial__name= name
+                        p.testimonial__position= position
+                        p.testimonial__text= text
+
+                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+
+            .partners
+                mixin partner(imgUrl, linkUrl)
+                    .partner
+                        a(href= linkUrl): img(src= imgUrl)
+
+                +partner("", "#")
+                +partner("", "#")
+                +partner("", "#")
+                +partner("", "#")
+                +partner("", "#")
+        
+        section.section
+            header.section__header
+                p.section__suptitle New Design
+                h2.section__title There is no other platforms for you as like <span>...</span>
+
+            .section__content
+                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+
+        section.section.section--sign-up
+
+        footer.footer
