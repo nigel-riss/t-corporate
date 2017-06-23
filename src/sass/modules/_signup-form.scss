@@ -1,12 +1,19 @@
 .signup-form {
+    // typography
+    text-align: center;
+
     &__input {
         // box model
+        display: block;
         width: 100%;
+        max-width: 500px;
         padding: 15px 30px;
+        margin: 0 auto;
         margin-bottom: 20px;
 
         // typography
         font-size: 1rem;
+        text-align: left;
 
         // visual
         background-color: rgba($white, 0.1);
@@ -16,6 +23,16 @@
         &::-webkit-input-placeholder {
             // typography
             color: $white;
+        }
+    }
+
+    &__comment {
+        // typography
+        color: rgba($white, 0.6);
+        
+        a {
+            // typography
+            color: rgba($white, 0.6);
         }
     }
 }

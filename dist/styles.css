@@ -446,7 +446,8 @@ body {
   text-transform: uppercase;
   background-color: #ff6d6d;
   border: none;
-  border-radius: 3px; }
+  border-radius: 3px;
+  cursor: pointer; }
 
 .section {
   background-color: #ececec; }
@@ -455,8 +456,15 @@ body {
       min-height: 100vh; } }
   .section--features {
     background-color: #f6f5f3; }
+    @media (min-width: 1200px) {
+      .section--features {
+        display: flex; } }
   .section--testimonials {
+    padding-top: 40px;
     background-color: #22232a; }
+    @media (min-width: 900px) {
+      .section--testimonials {
+        background-image: url("./img/testi-bg.gif"); } }
   .section--sign-up {
     background-color: #323969; }
   .section--white {
@@ -467,6 +475,15 @@ body {
     background-image: linear-gradient(225deg, transparent 0%, transparent 75%, #fb8686 75%, #fb8686 100%); }
   .section--deco-12 {
     background-image: linear-gradient(45deg, transparent 0%, transparent 75%, #fb8686 75%, #fb8686 100%); }
+  .section--flex {
+    display: flex; }
+  .section--auto {
+    height: auto;
+    min-height: auto;
+    padding: 60px 0; }
+  @media (min-width: 1200px) {
+    .section__header--mb70 {
+      margin-bottom: 70px; } }
   .section__suptitle {
     margin-bottom: 5px;
     color: #ff6d6d;
@@ -493,11 +510,36 @@ body {
     font-size: 1rem;
     line-height: 1.625; }
   .section__wrapper {
-    padding: 20px; }
+    padding: 20px;
+    max-width: 1160px;
+    margin: 0 auto; }
     .section__wrapper--white {
       background-color: #ffffff; }
+    @media (min-width: 1200px) {
+      .section__wrapper--flex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center; } }
+    @media (min-width: 1200px) {
+      .section__wrapper--left {
+        height: 100vh;
+        width: 62.2%;
+        max-width: 62.2%;
+        margin: 0; } }
+  @media (min-width: 1200px) {
+    .section__content--about {
+      width: 600px; } }
+  @media (min-width: 1200px) {
+    .section__content--goose {
+      width: 45%; } }
+  @media (min-width: 1200px) {
+    .section__features {
+      display: flex; } }
 
 .testimonial {
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center; }
   .testimonial__avatar {
     height: 76px;
@@ -516,13 +558,84 @@ body {
     font-weight: 400;
     line-height: 1.625; }
 
-.signup-form__input {
+.signup-form {
+  text-align: center; }
+  .signup-form__input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px; }
+    .signup-form__input::-webkit-input-placeholder {
+      color: #ffffff; }
+  .signup-form__comment {
+    color: rgba(255, 255, 255, 0.6); }
+    .signup-form__comment a {
+      color: rgba(255, 255, 255, 0.6); }
+
+.footer__wrapper {
+  padding: 20px; }
+
+.feature {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center; }
+  @media (min-width: 1200px) {
+    .feature {
+      margin: 0 20px; } }
+  .feature__icon {
+    height: 65px;
+    width: 65px;
+    margin: 0 auto;
+    margin-bottom: 30px; }
+    .feature__icon img {
+      height: 100%;
+      width: 100%; }
+  .feature__title {
+    color: #282828;
+    font-size: 1.375rem;
+    font-weight: 500; }
+  .feature__text {
+    color: rgba(40, 40, 40, 0.8);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.625; }
+
+.footer-block__legalinfo {
+  color: rgba(40, 40, 40, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.86; }
+
+.footer-block__menu {
+  margin: 0;
+  padding: 0; }
+  .footer-block__menu li {
+    margin-bottom: 10px;
+    list-style: none; }
+  .footer-block__menu a {
+    color: rgba(40, 40, 40, 0.8);
+    font-weight: 500;
+    text-decoration: none; }
+
+.macbook {
   width: 100%;
-  padding: 15px 30px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 3px; }
-  .signup-form__input::-webkit-input-placeholder {
-    color: #ffffff; }
+  padding: 10px; }
+  @media (min-width: 1200px) {
+    .macbook {
+      order: -1;
+      width: 45%;
+      margin-right: 8%; } }
+  .macbook img {
+    width: 100%; }
+
+@media (min-width: 1200px) {
+  .testimonials {
+    display: flex;
+    align-items: center; } }

@@ -13,43 +13,46 @@ html(lang='en')
                 p.header__comment * No need to add Cards details
 
         section.section.section--deco-45
-            .section__wrapper.section__wrapper--white
-                header.section__header
-                    p.section__suptitle New Design
-                    h2.section__title There is no other platforms for you as like <span>...</span>
+            .section__wrapper.section__wrapper--white.section__wrapper--left.section__wrapper--flex
+                .section__content.section__content--about
+                    header.section__header
+                        p.section__suptitle New Design
+                        h2.section__title There is no other platforms for you as like <span>...</span>
 
-                .section__content
                     p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
                     p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
 
         section.section.section--features
-            .section__wrapper
-                header.section__header
-                    p.section__suptitle.section__suptitle--center New Features
-                    h2.section__title.section__suptitle--center Some awesome Features
-
+            .section__wrapper.section__wrapper--flex
                 .section__content
-                    mixin feature(title, text, imgUrl)
-                        article.feature 
-                            .feature__icon: img(src= imgUrl)
-                            .h3.feature__title= title
-                            p.feature__text= text
+                    header.section__header.section__header--mb70
+                        p.section__suptitle.section__suptitle--center New Features
+                        h2.section__title.section__suptitle--center Some awesome Features
+                    
+                    .section__features
+                        mixin feature(imgUrl, title, text)
+                            article.feature 
+                                .feature__icon: img(src= imgUrl)
+                                .h3.feature__title= title
+                                p.feature__text= text
 
-                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
-                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
-                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                        +feature("./img/icons/picture.png", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi.")
+                        +feature("./img/icons/airplane.png", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi.")
+                        +feature("./img/icons/bulb.png", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi.")
 
-        section.section.section--white.section--deco-78
-            .section__wrapper
-                header.section__header
-                    p.section__suptitle New Design
-                    h2.section__title Responsive design, just need your tap <span>...</span>
+        section.section.section--white.section--deco-78.section--flex.section--auto
+            .section__wrapper.section__wrapper--flex
+                .section__content.section__content--goose
+                    header.section__header
+                        p.section__suptitle New Design
+                        h2.section__title Responsive design, just need your tap <span>...</span>
 
-                .section__content
-                    p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                        p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Quia dolorem, dolore!
 
-        section.section.section--testimonials
-            .section__wrapper
+                .macbook: img(src="./img/goose.png", alt="")
+
+        section.section.section--testimonials.section--flex
+            .section__wrapper.section__wrapper--flex
                 .testimonials
                     mixin testimonial(name, position, text, avatarUrl)
                         article.testimonial
@@ -62,27 +65,28 @@ html(lang='en')
                     +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
                     +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
 
-            .partners
-                mixin partner(imgUrl, linkUrl)
-                    .partner
-                        a(href= linkUrl): img(src= imgUrl)
+                .partners
+                    mixin partner(imgUrl, linkUrl)
+                        .partner
+                            a(href= linkUrl): img(src= imgUrl)
 
-                +partner("", "#")
-                +partner("", "#")
-                +partner("", "#")
-                +partner("", "#")
-                +partner("", "#")
+                    +partner("", "#")
+                    +partner("", "#")
+                    +partner("", "#")
+                    +partner("", "#")
+                    +partner("", "#")
         
-        section.section.section--features
-            .section__wrapper
-                header.section__header
-                    p.section__suptitle.section__suptitle--center New Features
-                    h2.section__title.section__title--center Some awesome features <span>...</span>
-
+        section.section.section--features.section--flex
+            .section__wrapper.section__wrapper--flex
                 .section__content
-                    p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                    header.section__header
+                        p.section__suptitle.section__suptitle--center New Features
+                        h2.section__title.section__title--center Some awesome features <span>...</span>
 
-        section.section.section--sign-up
+                        p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                .browser
+
+        section.section.section--sign-up.section--auto
             .section__wrapper
                 header.section__header
                     p.section__suptitle.section__suptitle--center New Features
@@ -94,13 +98,13 @@ html(lang='en')
                         input(type="email", placeholder="YOUR EMAIL").signup-form__input
                         input(type="password", placeholder="PASSWORD").signup-form__input
                         input(type="submit", value="Try Now").button
-                        p.signup-form__comment By Singing up you agree to our #[a(href="") terms & Services]
+                        p.signup-form__comment By Singing up you agree to our #[a(href="") terms&nbsp;&&nbsp;Services]
 
 
         footer.footer.section--deco-12
             .footer__wrapper
                 .footer-block
-                    .logo: img(src="", alt="")
+                    .logo: img(src="./img/logo.png", alt="logo")
                     .footer-block__legalinfo Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. <br> USA & CAN: 1-888-123-4567 <br> Address: 34 Brokel Rd. NY
 
                 .footer-block

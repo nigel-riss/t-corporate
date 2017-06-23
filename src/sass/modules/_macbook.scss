@@ -1,0 +1,17 @@
+.macbook {
+    // box model
+    width: 100%;
+    padding: 10px;
+
+    @include atDesktop {
+        // box model
+        order: -1;
+        width: 45%;
+        margin-right: 8%;
+    }
+
+    img {
+        // box model
+        width: 100%;
+    }
+}

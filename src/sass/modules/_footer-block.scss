@@ -1,0 +1,34 @@
+.footer-block {
+    &__legalinfo {
+        // typography
+        color: rgba(#282828, 0.8);
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.86;
+    }
+
+    &__title {
+
+    }
+
+    &__menu {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        li {
+            // box model
+            margin-bottom: 10px;
+
+            // other
+            list-style: none;
+        }
+
+        a {
+            // typography
+            color: rgba(#282828, 0.8);
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}

@@ -12,11 +12,24 @@
     &--features {
         // visual
         background-color: $featuresBg;
+
+        @include atDesktop {
+            // box model
+            display: flex;
+        }
     }
 
     &--testimonials {
+        // box model
+        padding-top: 40px;
+
         // visual
         background-color: $testiBg;
+
+        @include atTabletsLandscape {
+            // visual
+            background-image: url('./img/testi-bg.gif');
+        }
     }
 
     &--sign-up {
@@ -42,6 +55,26 @@
     &--deco-12 {
         // visual
         background-image: linear-gradient(45deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+    }
+
+    &--flex {
+        // box model
+        display: flex;
+    }
+
+    &--auto {
+        // box model
+        height: auto;
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    &__header {
+        &--mb70 {
+            @include atDesktop {
+                margin-bottom: 70px;
+            }
+        }
     }
 
     &__suptitle {
@@ -98,11 +131,58 @@
 
     &__wrapper {
         // box model
+        // border: 1px solid red;
         padding: 20px;
+        max-width: 1160px;
+        margin: 0 auto;
 
         &--white {
             // visual
             background-color: $white;
+        }
+
+        &--flex {
+            @include atDesktop {
+                // box model
+                display: flex;
+                // justify-content: space-around;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        &--left {
+            @include atDesktop {
+                // box model
+                height: 100vh;
+                width: 62.2%;
+                max-width: 62.2%;
+                margin: 0;
+            }
+        }
+    }
+
+    &__content {
+        &--about {
+            @include atDesktop {
+                // box model
+                // display: block;
+                width: 600px;
+            }
+        }
+
+        &--goose {
+            @include atDesktop {
+                width: 45%;
+            }
+        }
+    }
+
+    &__features {
+        @include atDesktop {
+            // box model
+            display: flex;
         }
     }
 }
