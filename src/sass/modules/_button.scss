@@ -1,0 +1,15 @@
+.button {
+    // box model
+    display: inline-block;
+    padding: 15px 45px;
+
+    // typography
+    color: $white;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // visual
+    background-color: $accent;
+    border-radius: 3px;
+}

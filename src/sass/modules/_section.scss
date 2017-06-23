@@ -1,0 +1,8 @@
+.section {
+    // box model
+    min-height: 100vh;
+
+    // visual
+    background-color: $sectionBg;
+    background-image: linear-gradient(135deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+}
