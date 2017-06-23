@@ -1,8 +1,108 @@
 .section {
     // box model
-    min-height: 100vh;
 
     // visual
     background-color: $sectionBg;
-    background-image: linear-gradient(135deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+
+    @include atDesktop {
+        // box model
+        min-height: 100vh;
+    }
+
+    &--features {
+        // visual
+        background-color: $featuresBg;
+    }
+
+    &--testimonials {
+        // visual
+        background-color: $testiBg;
+    }
+
+    &--sign-up {
+        // visual
+        background-color: $violet;
+    }
+
+    &--white {
+        // visual
+        background-color: $white;
+    }
+
+    &--deco-45 {
+        // visual
+        background-image: linear-gradient(135deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+    }
+
+    &--deco-78 {
+        // visual
+        background-image: linear-gradient(225deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+    }
+
+    &--deco-12 {
+        // visual
+        background-image: linear-gradient(45deg, transparent 0%, transparent 75%, $pink 75%, $pink 100%);
+    }
+
+    &__suptitle {
+        // box model
+        margin-bottom: 5px;
+
+        // typography
+        color: $accent;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &--center {
+            // typography
+            text-align: center;
+        }
+    }
+
+    &__title {
+        // box model
+        margin-top: 0;
+
+        // typography
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.25;
+        
+        @include atDesktop {
+            // typography
+            font-size: 2.5rem;
+        }
+
+        &--center {
+            // typography
+            text-align: center;
+        }
+
+        &--white {
+            // typography
+            color: $white;
+        }
+
+        span {
+            // typography
+            color: $accent;
+        }
+    }
+
+    &__text {
+        // typography
+        font-size: 1rem;
+        line-height: 1.625;
+    }
+
+    &__wrapper {
+        // box model
+        padding: 20px;
+
+        &--white {
+            // visual
+            background-color: $white;
+        }
+    }
 }

@@ -1,0 +1,21 @@
+.signup-form {
+    &__input {
+        // box model
+        width: 100%;
+        padding: 15px 30px;
+        margin-bottom: 20px;
+
+        // typography
+        font-size: 1rem;
+
+        // visual
+        background-color: rgba($white, 0.1);
+        border: 1px solid rgba($white, 0.5);
+        border-radius: 3px;
+
+        &::-webkit-input-placeholder {
+            // typography
+            color: $white;
+        }
+    }
+}

@@ -12,52 +12,55 @@ html(lang='en')
                 a(href="#").button Try now
                 p.header__comment * No need to add Cards details
 
-        section.section
-            header.section__header
-                p.section__suptitle New Design
-                h2.section__title There is no other platforms for you as like <span>...</span>
+        section.section.section--deco-45
+            .section__wrapper.section__wrapper--white
+                header.section__header
+                    p.section__suptitle New Design
+                    h2.section__title There is no other platforms for you as like <span>...</span>
 
-            .section__content
-                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
-                p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
+                .section__content
+                    p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                    p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
 
-        section.section
-            header.section__header
-                p.section__suptitle New Features
-                h2.section__title Some awesome Features
+        section.section.section--features
+            .section__wrapper
+                header.section__header
+                    p.section__suptitle.section__suptitle--center New Features
+                    h2.section__title.section__suptitle--center Some awesome Features
 
-            .section__content
-                mixin feature(title, text, imgUrl)
-                    article.feature 
-                        .feature__icon: img(src= imgUrl)
-                        .h3.feature__title= title
-                        p.feature__text= text
+                .section__content
+                    mixin feature(title, text, imgUrl)
+                        article.feature 
+                            .feature__icon: img(src= imgUrl)
+                            .h3.feature__title= title
+                            p.feature__text= text
 
-                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
-                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
-                +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
+                    +feature("", "Some awesome features", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, ex, inventore culpa quo dolorum nesciunt sequi. Officia et architecto modi, necessitatibus.")
 
-        section.section
-            header.section__header
-                p.section__suptitle New Design
-                h2.section__title There is no other platforms for you as like <span>...</span>
+        section.section.section--white.section--deco-78
+            .section__wrapper
+                header.section__header
+                    p.section__suptitle New Design
+                    h2.section__title Responsive design, just need your tap <span>...</span>
 
-            .section__content
-                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
-                p.section__text Illo amet dolores quae blanditiis cum ipsa a quis tempora sit voluptate consequatur minus itaque aspernatur temporibus, voluptatibus perferendis magni placeat consectetur inventore. Soluta quis voluptatibus fugit quibusdam obcaecati saepe!
+                .section__content
+                    p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
 
         section.section.section--testimonials
-            .testimonials
-                mixin testimonial(name, position, text, avatarUrl)
-                    article.testimonial
-                        .testimonial__avatar: img(src= imgUrl)
-                        h3.testimonial__name= name
-                        p.testimonial__position= position
-                        p.testimonial__text= text
+            .section__wrapper
+                .testimonials
+                    mixin testimonial(name, position, text, avatarUrl)
+                        article.testimonial
+                            .testimonial__avatar: img(src= imgUrl)
+                            h3.testimonial__name= name
+                            p.testimonial__position= position
+                            p.testimonial__text= text
 
-                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
-                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
-                +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+                    +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+                    +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
+                    +testimonial("Jonathon Doe", "Co Founder", "Eaque facilis magni necessitatibus, laudantium in dicta ipsam porro. Tenetur tempore error ut ducimus nemo aliquam delectus. Animi commodi praesentium quo quas!", "")
 
             .partners
                 mixin partner(imgUrl, linkUrl)
@@ -70,14 +73,53 @@ html(lang='en')
                 +partner("", "#")
                 +partner("", "#")
         
-        section.section
-            header.section__header
-                p.section__suptitle New Design
-                h2.section__title There is no other platforms for you as like <span>...</span>
+        section.section.section--features
+            .section__wrapper
+                header.section__header
+                    p.section__suptitle.section__suptitle--center New Features
+                    h2.section__title.section__title--center Some awesome features <span>...</span>
 
-            .section__content
-                p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
+                .section__content
+                    p.section__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores vero illo, sint expedita asperiores officia, rerum esse, delectus temporibus est, quisquam beatae! Delectus quia iure, eius maiores. Quia dolorem, dolore!
 
         section.section.section--sign-up
+            .section__wrapper
+                header.section__header
+                    p.section__suptitle.section__suptitle--center New Features
+                    h2.section__title.section__title--center.section__title--white Over 1000 designers are using ...
+                
+                .section__content
+                    form.signup-form
+                        input(type="text", placeholder="FULL NAME").signup-form__input
+                        input(type="email", placeholder="YOUR EMAIL").signup-form__input
+                        input(type="password", placeholder="PASSWORD").signup-form__input
+                        input(type="submit", value="Try Now").button
+                        p.signup-form__comment By Singing up you agree to our #[a(href="") terms & Services]
 
-        footer.footer
+
+        footer.footer.section--deco-12
+            .footer__wrapper
+                .footer-block
+                    .logo: img(src="", alt="")
+                    .footer-block__legalinfo Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. <br> USA & CAN: 1-888-123-4567 <br> Address: 34 Brokel Rd. NY
+
+                .footer-block
+                    h3.footer-block__title Support
+                    ul.footer-block__menu
+                        li: a(href="") Help Center
+                        li: a(href="") Get Started
+                        li: a(href="") Contact US
+
+                .footer-block
+                    h3.footer-block__title About US
+                    ul.footer-block__menu
+                        li: a(href="") About Us
+                        li: a(href="") Terms of Use
+                        li: a(href="") Privacy Policy
+
+                .footer-block
+                    h3.footer-block__title Get Newsletter
+                    form.news-form
+                        input(type="email", placeholder="EMAIL")
+                        input(type="submit", value="").button
+                    .social

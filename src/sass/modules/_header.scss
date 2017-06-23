@@ -3,8 +3,9 @@
     position: relative;
 
     // box model
-    min-height: 100vh;
+    // min-height: 100vh;
     // padding-top: 50%;
+    height: 450px;
 
     // typography
     text-align: center;
@@ -19,6 +20,11 @@
     @include atTabletsLandscape {
         // visual
         background-image: url('./img/header-bg-l.jpg');
+    }
+
+    @include atDesktop {
+        // box model
+        min-height: 100vh;
     }
 
     @include atDesktopXL {
@@ -38,7 +44,13 @@
 
     &__title {
         // typography
-        font-size: 3.75rem;
-        font-weight: 100;
+        font-size: 2rem;
+        font-weight: 400;
+
+        @include atDesktop {
+            // typography
+            font-size: 3.75rem;
+            font-weight: 100;
+        }
     }
 }
